@@ -1,0 +1,13 @@
+name: simple
+
+service :
+  web-1:
+    image: wandi94/simple-wandi
+    build: ./app
+    ports:
+      - "3090:3000"
+    volumes:
+      - vol-simple:/app/public/images/
+
+volumes:
+  vol-simple:
